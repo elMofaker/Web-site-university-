@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb);
+
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Adding custom Arabic font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #d6720f, #FF9800); /* Darker yellow to orange gradient */
+    padding: 1.2rem 0;
+    box-shadow: none; /* Removed box-shadow */
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-family: 'Amiri', serif; /* Beautiful Arabic font */
+    color: #FFEB3B; /* Bright yellow for the logo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to make it stand out */
+    letter-spacing: 3px; /* Spacing out the letters */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Darker yellow to orange gradient on hover */
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    background: linear-gradient(135deg, #FF9800, #FFC107); /* Active yellow to orange gradient */
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #f5f7fa, #e3e8f1);
+    border: none; /* Removed white borders */
+    box-shadow: none; /* Removed shadow */
+}
+
+.privacy-policy h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: #FFC107; /* Darker yellow color for the main heading */
+    text-align: center;
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Gradient for the title */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.privacy-policy p, .privacy-policy ul {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333; /* Darker color for text for better readability */
+}
+
+.privacy-policy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    color: #ff9807; /* Darker yellow color for subheadings */
+    background: linear-gradient(135deg, #ff8b07, #FF9800); /* Gradient for subheading */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2::before {
+    content: "► ";
+    color: #FF9800; /* Darker yellow for the bullet point */
+}
+
+/* Links */
+a {
+    color: #ffa407; /* Darker yellow color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff7700; /* Darker yellow on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    margin-top: 3rem;
+    box-shadow: none; /* Removed shadow */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+
+/* For screens 768px and above (tablets and larger devices) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .privacy-policy h1 {
+        font-size: 1.8rem;
+    }
+
+    .privacy-policy p, .privacy-policy ul {
+        font-size: 0.95rem;
+    }
+
+    .privacy-policy ul {
+        margin-left: 15px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* For screens 480px and below (mobiles) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .privacy-policy {
+        padding: 0 15px;
+    }
+
+    .privacy-policy h1 {
+        font-size: 1.6rem;
+    }
+
+    .privacy-policy p, .privacy-policy ul {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+}
